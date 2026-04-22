@@ -1,3 +1,35 @@
+::root {
+    --rotate-value: rotate(30deg);
+}
+
 body {
     background-color: pink;
+}
+
+#content {
+    height: 10em;
+}
+
+.bat {
+    height: 3em;
+}
+
+.gray-filter {
+    filter: invert(38%) sepia(0%) saturate(1098%) hue-rotate(137deg) brightness(97%) contrast(92%);
+}
+
+.rotate {
+   transform: var(--rotate-value);
+}
+
+.wisp {
+    filter: opacity(25%)
+}
+
+.ghost {
+    filter: opacity(50%);
+}
+
+.ghoul {
+    filter: opacity(75%)
 }
