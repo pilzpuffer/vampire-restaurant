@@ -48,6 +48,7 @@
 :root {
     --blood: rgba(122, 0, 0);
     --ash: rgba(97, 97, 97);
+    --bone: rgb(255, 255, 255);
 }
 
 *, *::before, *::after {
@@ -96,6 +97,17 @@ nav {
     gap: 2rem;
 
     padding: 0 5%;
+
+    font-family: "Cinzel Decorative";
+    font-weight: bold;
+    font-size: 3em;
+}
+
+nav > button {
+    background-color: var(--blood);
+    border: none;
+
+    color: var(--bone)
 }
 
 #content {
