@@ -6,17 +6,25 @@ console.log('Hey, bloodsucker!');
 window.addEventListener("load", function() {
 
     let content = document.querySelector("#content");
-    let batVariety = ["gray-filter", "rotate", "wisp", "ghost", "ghoul"];
+
+    let batVariety = [["fog"], ["mirror"], ["tipsy", "boozy", "drunk", "confused", "disoriented", "lost"], ["wisp", "ghost", "ghoul"], ["fairy", "dwarf", "giant", "goliath"]];
 
     for (let i = 0; i < 10; i++) {
         let bat = document.createElement("img");
-        let selectVariant = batVariety[Math.floor(Math.random() * batVariety.length)];
-        console.log(selectVariant);
+        let selectVariant = function() {
+            let categorySelect = batVariety[Math.floor(Math.random() * batVariety.length)];
+            return categorySelect[Math.floor(Math.random() * categorySelect.length)];
+        }
+
+        let currentPick = selectVariant();
         let chance = Math.random();
         bat.src = batImage;
         bat.classList.add("bat");
             if ( chance > 0.5 ) {
-                bat.classList.add(`${selectVariant}`);
+                bat.classList.contains(`${currentPick}`) ? bat.classList.add(`${selectVariant()}`) : bat.classList.add(`${currentPick}`);
+                if (chance > 0.75) {
+                    bat.classList.contains(`${currentPick}`) ? bat.classList.add(`${selectVariant()}`) : bat.classList.add(`${currentPick}`);
+                } 
             }
 
         content.appendChild(bat);

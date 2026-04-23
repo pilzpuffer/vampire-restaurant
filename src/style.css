@@ -1,9 +1,10 @@
 ::root {
-    --rotate-value: rotate(30deg);
+    --blood: rgba(122, 0, 0);
+    --ash: rgba(97, 97, 97);
 }
 
 body {
-    background-color: pink;
+    background-color: rgba(97, 97, 97);
 }
 
 #content {
@@ -14,12 +15,8 @@ body {
     height: 3em;
 }
 
-.gray-filter {
-    filter: invert(38%) sepia(0%) saturate(1098%) hue-rotate(137deg) brightness(97%) contrast(92%);
-}
-
-.rotate {
-   transform: var(--rotate-value);
+.fog {
+    filter: invert(14%) sepia(4%) saturate(434%) hue-rotate(169deg) brightness(90%) contrast(91%);
 }
 
 .wisp {
@@ -32,4 +29,48 @@ body {
 
 .ghoul {
     filter: opacity(75%)
+}
+
+.tipsy {
+   transform: rotate(10deg);
+}
+
+.boozy {
+    transform: rotate(20deg);
+}
+
+.drunk {
+    transform: rotate(30deg);
+}
+
+.confused {
+    transform: rotate(-10deg);
+}
+
+.disoriented {
+    transform: rotate(-20deg);
+}
+
+.lost {
+    transform: rotate(-30deg);
+}
+
+.mirror {
+    transform: scaleX(-1);
+}
+
+.fairy {
+    transform: scale(0.25)
+}
+
+.dwarf {
+    transform: scale(0.75)
+}
+
+.giant {
+    transform: scale(1.25)
+}
+
+.goliath {
+    transform: scale(2)
 }
