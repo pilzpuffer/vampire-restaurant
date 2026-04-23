@@ -1,5 +1,6 @@
 import "./style.css";
 import batImage from "./assets/img/bat.svg";
+import bloodIcon from "./assets/img/blood.svg"
 
 console.log('Hey, bloodsucker!');
 
@@ -7,7 +8,14 @@ window.addEventListener("load", function() {
 
     let content = document.querySelector("#content");
 
-    let batVariety = [["fog"], ["mirror"], ["tipsy", "boozy", "drunk", "confused", "disoriented", "lost"], ["wisp", "ghost", "ghoul"], ["fairy", "dwarf", "giant", "goliath"]];
+    let batVariety =[
+                        ["mirror"], 
+                        ["shuffleL", "shuffleR", "slideL", "slideR"], 
+                        ["jump", "fly", "dig", "tunnel"], 
+                        ["tipsy", "boozy", "drunk", "confused", "disoriented", "lost"], 
+                        ["wisp", "ghost", "ghoul"], 
+                        ["fairy", "dwarf", "giant", "goliath"]
+                    ];
 
     for (let i = 0; i < 10; i++) {
         let bat = document.createElement("img");

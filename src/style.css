@@ -1,3 +1,50 @@
+@font-face {
+    font-family: "Cinzel Decorative";
+    src: 
+        url("./assets/fonts/CinzelDecorative-Black.woff2") format("woff2"),
+        url("./assets/fonts/CinzelDecorative-Black.woff") format("woff");
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "Cinzel Decorative";
+    src: 
+        url("./assets/fonts/CinzelDecorative-Bold.woff2") format("woff2"),
+        url("./assets/fonts/CinzelDecorative-Bold.woff") format("woff");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "Cinzel Decorative";
+    src: 
+        url("./assets/fonts/CinzelDecorative-Regular.woff2") format("woff2"),
+        url("./assets/fonts/CinzelDecorative-Regular.woff") format("woff");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Noto Serif";
+    src: 
+        url("./assets/fonts/NotoSerifDisplay-Regular.woff2") format("woff2"),
+        url("./assets/fonts/NotoSerifDisplay-Regular.woff") format("woff");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Noto Serif";
+    src: 
+        url("./assets/fonts/NotoSerifDisplay-Italic.woff2") format("woff2"),
+        url("./assets/fonts/NotoSerifDisplay-Italic.woff") format("woff");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Tan";
+    src: 
+        url("./assets/fonts/TAN.woff2") format("woff2"),
+        url("./assets/fonts/TAN.woff") format("woff");
+}
+
 :root {
     --blood: rgba(122, 0, 0);
     --ash: rgba(97, 97, 97);
@@ -11,12 +58,15 @@
   margin: 0;
 }
 
+body, html {
+    height: 100%;
+}
+
 body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     background-color: var(--ash);
-/* background: #545454;
-background: linear-gradient(0deg, rgba(84, 84, 84, 1) 0%, rgba(72, 72, 72, 1) 15%, rgba(51, 51, 51, 1) 40%, rgba(31, 31, 31, 1) 100%); */
+    overflow-x: hidden;
 }
 
 input, button, textarea, select {
@@ -34,19 +84,27 @@ h1, h2, h3, h4, h5, h6 {
   text-wrap: balance;
 }
 
-#content {
+nav, #content {
     margin: auto;
-    width: 60%;
-    height: 100rem;
+    width: 60%; /* use clamp later, find good width */
     background-color: var(--blood);
+}
+
+nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    padding: 0 5%;
+}
+
+#content {
+    height: 100%;
 }
 
 .bat {
     height: 3em;
-}
-
-.fog {
-    filter: invert(14%) sepia(4%) saturate(434%) hue-rotate(169deg) brightness(90%) contrast(91%);
+    position: absolute;
 }
 
 .wisp {
@@ -83,6 +141,38 @@ h1, h2, h3, h4, h5, h6 {
 
 .lost {
     transform: rotate(-30deg);
+}
+
+.jump {
+    margin-top: -1em;
+}
+
+.fly {
+    margin-top: -2em;
+}
+
+.dig {
+    margin-top: 1em;
+}
+
+.tunnel {
+    margin-top: 2em;
+}
+
+.shuffleL {
+    margin-left: -2em;
+}
+
+.shuffleR {
+    margin-left: 2em;
+}
+
+.slideL {
+    margin-left: -3em;
+}
+
+.slideR {
+    margin-left: 3em;
 }
 
 .mirror {
