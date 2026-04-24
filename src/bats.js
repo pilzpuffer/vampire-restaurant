@@ -12,8 +12,10 @@ let batCloud = function () {
 
     for (let i = 0; i < 10; i++) {
         let bat = document.createElement("img");
+        let categorySelect;
         let selectVariant = function() {
-            let categorySelect = batVariety[Math.floor(Math.random() * batVariety.length)];
+            categorySelect = batVariety[Math.floor(Math.random() * batVariety.length)];
+            console.log(batVariety.indexOf(categorySelect));
             return categorySelect[Math.floor(Math.random() * categorySelect.length)];
         }
 
@@ -21,9 +23,12 @@ let batCloud = function () {
         let chance = Math.random();
         bat.src = batImage;
         bat.classList.add("bat");
-            if ( chance > 0.5 ) {
+            if ( chance > 0.4 ) {
+                if (bat.classList.contains(`${currentPick}`) && !bat.classList.contains(batVariety.indexOf(categorySelect))) {
+                    console.log (`current pick is ${currentPick}, this is bat number ${i}`)
+                }
                 bat.classList.contains(`${currentPick}`) ? bat.classList.add(`${selectVariant()}`) : bat.classList.add(`${currentPick}`);
-                if (chance > 0.75) {
+                if (chance > 0.7) {
                     bat.classList.contains(`${currentPick}`) ? bat.classList.add(`${selectVariant()}`) : bat.classList.add(`${currentPick}`);
                 } 
             }
