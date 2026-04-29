@@ -114,6 +114,10 @@ nav > button {
     color: var(--bone)
 }
 
+nav > div {
+    z-index: 2;
+}
+
 #content {
     height: 100%;
 }
@@ -121,6 +125,7 @@ nav > button {
 .bat {
     height: 3em;
     position: absolute;
+    pointer-events: none;
 }
 
 .wisp {

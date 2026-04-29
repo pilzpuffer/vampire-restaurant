@@ -1,2 +1,14 @@
 //make 'normal' contact text for any humans that would unknowingly
 //step into this place. BUT the text should change on hover
+
+let contactDisplay = function() {
+    let content = document.querySelector("#content");
+
+    content.replaceChildren();
+
+    let contactBlock = document.createElement("div");
+    contactBlock.textContent = 'test2'
+    content.appendChild(contactBlock);
+}
+
+export { contactDisplay };
