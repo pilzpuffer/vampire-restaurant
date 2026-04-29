@@ -10,10 +10,22 @@ let batCloud = function () {
                         ["fairy", "dwarf", "giant", "goliath"]
                     ];
 
-    for (let i = 0; i < 10; i++) {
+    for (let n = 0; n < 10; n++) {
+        let body = document.querySelector("body");
+
         let bat = document.createElement("img");
         bat.src = batImage;
         bat.classList.add("bat");
+
+        function placeBat() { //fix so that bats won't elongate the page beyond content
+            let maxX = innerWidth;
+            let maxY = body.scrollHeight - bat.height;
+            let x = Math.random() * maxX;
+            let y = Math.random() * maxY;
+
+            bat.style = `left: ${x}px; top: ${y}px;`;
+            body.appendChild(bat)
+        }
 
         let categorySelect;
         let chance = Math.random();
@@ -25,39 +37,51 @@ let batCloud = function () {
         let currentPick = selectVariant();
 
         let duplicatePrevent = function() {
+            console.log(`current trait pick is ${currentPick}`);
             let currTrait = [];
             let newTrait = [];
-            for ( let i = 0; i < batVariety.length; i++ ) {
+
+            while (newTrait.length < 2 && currTrait.length < 2 ) {
+
+                for ( let i = 0; i < batVariety.length; i++ ) {
                 for ( let j = 0; j < batVariety[i].length; j++ ) {
                     if ( batVariety[i][j] === bat.classList[1] ) {
                         currTrait = [i, j];
+                        console.log(`this is bat number ${n}, and her current unique trait is ${bat.classList[1]}, its index is ${currTrait}`)
                     }
 
                     if ( batVariety[i][j] === `${currentPick}` ) {
                         newTrait = [i, j];
+                        console.log(`this is bat number ${n}, and her new trait is ${currentPick}, its index is ${newTrait}`)
                     }
                 }
+            }
 
                 if ( newTrait.length === 2 && currTrait.length === 2 ) {
+                    
                     if ( newTrait.toString() === currTrait.toString() || newTrait[0] === currTrait[0] ) {
+                        console.log('picking a new trait!');
+                        currTrait.length = 0;
+                        newTrait.length = 0;
                         currentPick = selectVariant();
                         duplicatePrevent();
                     } else {
                         bat.classList.add(`${currentPick}`);
+                        console.log(`adding initially picked trait, this is bat number ${n}, her traits are ${bat.classList}`);
                     }
                 }
             }
         }   
         
-        if ( chance > 0.4 ) {
+        if ( chance > 0.4) {
             bat.classList.add(currentPick);
         }
 
-        if ( chance > 0.7 ) {
-            duplicatePrevent();
+        if ( chance > 0.7) {
+            duplicatePrevent(); //check why some bats get more than 2 traits
         } 
 
-        content.appendChild(bat);
+        placeBat();
     } 
 }
 
