@@ -1,6 +1,4 @@
 import "./style.css";
-import bloodIcon from "./assets/img/blood.svg"
-import fangsIcon from "./assets/img/fangs.svg"
 
 import { batCloud } from "./bats.js";
 import { menuDisplay } from "./menu.js";
@@ -26,10 +24,12 @@ window.addEventListener("load", function() {
         button.addEventListener('click', function(event) {
             event.target.classList.add("hidden");
             title.textContent = event.target.textContent;
-            navigation[`${event.target.id}`]();
 
             let nonActiveMenuItems = [ ...allMenuButtons ].filter( button => button != event.target);
             nonActiveMenuItems.forEach((item) => item.classList.remove("hidden"));
+
+            content.replaceChildren();
+            navigation[`${event.target.id}`](); 
         })
     })
 })

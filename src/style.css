@@ -93,7 +93,7 @@ nav, #content {
     background-color: var(--blood);
 }
 
-nav {
+.main-nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 4.5rem 6rem;
@@ -107,6 +107,14 @@ nav {
     font-size: clamp(2.5rem, 4vw, 3.5rem)
 }
 
+.main-nav > button {
+    background: none;
+}
+
+.main-nav > div, .main-nav > button {
+    z-index: 2;
+}
+
 nav > button {
     background-color: var(--blood);
     border: none;
@@ -114,12 +122,70 @@ nav > button {
     color: var(--bone)
 }
 
-nav > div {
-    z-index: 2;
-}
-
 #content {
     height: 100%;
+}
+
+#center-title {
+    grid-row: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    place-self: center;
+
+    color: var(--bone);
+    font-size: clamp(4rem, 7vw, 6rem);
+
+    pointer-events: none;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.menu-nav {
+    font-family: "Tan";
+    font-size: clamp(1.3rem, 2vw, 2rem);
+
+    margin: auto;
+    padding-top: 1em;
+    width: 80%;
+
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3em;
+}
+
+.menu-nav > button, .menu-nav {
+    display: grid;
+    place-items: center;
+}
+
+.menu-nav > button {
+    grid-template-columns: 2fr 1fr;
+}
+
+.menu-nav > button:first-child {
+    grid-template-columns: 1fr 2fr;
+}
+
+button > img {
+    width: 2.5em;
+    filter: invert(1);
+}
+
+.menu-nav > button > img {
+    height: 1.65em;
+}
+
+.menu-nav > button:first-child > img {
+    grid-row: 1;
+    height: 1.5em;
+}
+
+.droplet {
+    position: absolute;
+    transform: scale(0.6);
+    margin-left: -3.1em;
+    margin-top: -1em;
 }
 
 .bat {
@@ -214,20 +280,4 @@ nav > div {
 
 .goliath {
     transform: scale(2)
-}
-
-#center-title {
-    grid-row: 2;
-    grid-column-start: 1;
-    grid-column-end: 4;
-    place-self: center;
-
-    color: var(--bone);
-    font-size: clamp(4rem, 7vw, 6rem);
-
-    pointer-events: none;
-}
-
-.hidden {
-    visibility: hidden;
 }

@@ -10,7 +10,7 @@ let batCloud = function () {
                         ["fairy", "dwarf", "giant", "goliath"]
                     ];
 
-    for (let n = 0; n < 69; n++) {
+    for (let n = 0; n < 42; n++) {
         let body = document.querySelector("body");
 
         let bat = document.createElement("img");

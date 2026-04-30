@@ -4,8 +4,6 @@
 let contactDisplay = function() {
     let content = document.querySelector("#content");
 
-    content.replaceChildren();
-
     let contactBlock = document.createElement("div");
     contactBlock.textContent = 'test2'
     content.appendChild(contactBlock);
