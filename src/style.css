@@ -147,11 +147,11 @@ nav > button {
     font-size: clamp(1.3rem, 2vw, 2rem);
 
     margin: auto;
-    padding-top: 1em;
+    padding: 2rem 0;
     width: 80%;
 
     grid-template-columns: repeat(2, 1fr);
-    gap: 3em;
+    gap: 3rem;
 }
 
 .menu-nav > button, .menu-nav {
@@ -161,6 +161,8 @@ nav > button {
 
 .menu-nav > button {
     grid-template-columns: 2fr 1fr;
+    background: none;
+    z-index: 2;
 }
 
 .menu-nav > button:first-child {
@@ -186,6 +188,33 @@ button > img {
     transform: scale(0.6);
     margin-left: -3.1em;
     margin-top: -1em;
+}
+
+.item {
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    place-items: center;
+
+    color: var(--bone);
+}
+
+.item + .item {
+    margin-top: 2rem;
+}
+
+.title, .description {
+    z-index: 2;
+}
+
+.title {
+    font-family: "Tan";
+    font-weight: bold;
+    font-size: 1.8rem;
+}
+
+.description {
+    font-family: "Noto Serif";
+    font-style: italic;
 }
 
 .bat {
