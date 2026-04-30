@@ -1,5 +1,29 @@
 import batImage from "./assets/img/bat.svg";
 
+function debounce(func, wait, immediate) {
+	let timeout;
+	return function() {
+		let context = this, args = arguments;
+		let later = function() {
+			timeout = null;
+			if (!immediate) func.apply(context, args);
+		};
+		let callNow = immediate && !timeout;
+		clearTimeout(timeout);
+		timeout = setTimeout(later, wait);
+		if (callNow) func.apply(context, args);
+	};
+};
+
+let batRenew = debounce(function() {
+    let allBats = document.querySelectorAll(".bat");
+    
+    allBats.forEach((bat) => {
+        bat.remove()
+    })
+    batCloud();
+}, 150);
+
 let batCloud = function () {
     let batVariety =[
                         ["mirror"], 
@@ -80,4 +104,4 @@ let batCloud = function () {
     } 
 }
 
-export { batCloud };
+export { batCloud, batRenew };

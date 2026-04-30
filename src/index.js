@@ -1,6 +1,6 @@
 import "./style.css";
 
-import { batCloud } from "./bats.js";
+import { batCloud, batRenew } from "./bats.js";
 import { menuDisplay } from "./menu.js";
 import { contactDisplay } from "./contact.js";
 import { homeDisplay } from "./home.js";
@@ -9,6 +9,10 @@ window.addEventListener("load", function() {
 
     let content = document.querySelector("#content");
     batCloud();
+
+    window.addEventListener("resize", function() {
+        batRenew();
+    })
 
     let title = document.querySelector("#center-title");
 

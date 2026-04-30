@@ -48,7 +48,13 @@ let menuDisplay = function() {
             content.appendChild(drinkItem);
         }
 
-        setUpDrink("testdrink", "made out of something?")
+        setUpDrink("prosecco blood shot", "Prosecco, Aperol, grenadine");
+        setUpDrink("vampire's kiss", "Vodka, grenadine, cranberry juice, Prosecco");
+        setUpDrink("ruby flash", "Aperol, cranberry juice, tonic water");
+        setUpDrink("bloody mary", "Vodka, tomato juice, spices");
+        setUpDrink("graveyard rose", "Pink gin, pomegranate juice, tonic water" );
+        setUpDrink("black daiquiri", "Rum, lemon, simple syrup");
+        setUpDrink("moonlight bite", "Rum, mint, lime, grenadine");
     }
 
     let foodMenu = function() {
