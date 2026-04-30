@@ -78,8 +78,9 @@ let menuDisplay = function() {
             content.appendChild(foodSection);
         }
 
-        setUpDish("testDish", ["dish1", "dish2", "dish3"]);
-        setUpDish("testDish2", ["dish12", "dish22", "dish32"]);
+        setUpDish("appetizers", ["Salmon Bruschetta", "Pâté Bruschetta", "Assorted canapés on skewers"]);
+        setUpDish("entrees", ["Creamy beef pasta", "Chicken and pomegranate salad", "Baked chicken thighs"]);
+        setUpDish("desserts", ["Classic cinnamon rolls", "Red Velvet cake"]);
     }
 
     let menuOptions = {

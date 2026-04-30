@@ -100,7 +100,7 @@ nav, #content {
     gap: 2rem;
     place-content: center;
 
-    padding: 0 clamp(1.5rem, 3vw, 5%);
+    padding: 0.5rem clamp(1.5rem, 3vw, 5%);
 
     font-family: "Cinzel Decorative";
     font-weight: bold;
@@ -215,6 +215,7 @@ button > img {
 .description {
     font-family: "Noto Serif";
     font-style: italic;
+    font-size: 1.15rem;
 }
 
 .bat {
