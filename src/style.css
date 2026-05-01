@@ -145,11 +145,19 @@ nav > button {
 }
 
 .home-text {
+    display: grid;
+    place-items: center;
+    grid-template-rows: repeat(5, 1fr);
+
+    width: 60%;
+    margin: auto;
+}
+
+.home-text > div {
     font-size: 1.3rem;
     font-family: "Noto Serif";
-
-    width: fit-content;
-    margin: auto;
+    text-align: center;
+    z-index: 2;
 }
 
 .menu-nav {
