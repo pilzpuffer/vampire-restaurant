@@ -30,6 +30,8 @@ let menuDisplay = function() {
 
     content.appendChild(menuBlock);
 
+    //add alt menu if user has seen the secret contact info
+
     let drinksMenu = function() {
         let setUpDrink = function(title, ingredients) {
             let drinkItem = document.createElement("div");

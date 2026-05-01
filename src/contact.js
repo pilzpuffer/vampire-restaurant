@@ -5,6 +5,7 @@ let contactDisplay = function() {
     let content = document.querySelector("#content");
 
     let contactBlock = document.createElement("div");
+    contactBlock.classList.add("contact-text");
     contactBlock.textContent = 'test2'
     content.appendChild(contactBlock);
 }
