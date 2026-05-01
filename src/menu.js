@@ -80,9 +80,11 @@ let menuDisplay = function() {
             content.appendChild(foodSection);
         }
 
-        setUpDish("appetizers", ["Salmon Bruschetta", "Pâté Bruschetta", "Assorted canapés on skewers"]);
-        setUpDish("entrees", ["Creamy beef pasta", "Chicken and pomegranate salad", "Baked chicken thighs"]);
-        setUpDish("desserts", ["Classic cinnamon rolls", "Red Velvet cake"]);
+        setUpDish("appetizers", ["Roasted beet carpaccio with whipped goat cheese", "Prosciutto-wrapped figs with balsamic glaze", 
+            "Mini tartlets with caramelized onions and brie", "Mushroom vol-au-vents"]);
+        setUpDish("entrees", ["Eggplant roulade with ricotta and tomato confit", "Red wine braised beef with rosemary potatoes",
+  "Seared duck breast with cherry sauce", "Dark cherry chicken salad with goat cheese", "Truffle cream fettuccine with wild mushrooms"]);
+        setUpDish("desserts", ["Black Forest gâteau", "Red Velvet cheesecake", "Dark chocolate raspberry torte", "Cherry mascarpone tart"]);
     }
 
     let menuOptions = {
