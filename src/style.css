@@ -78,7 +78,7 @@ body {
     overflow-y: visible;
     min-height: 100vh;
     height: 100%;
-    min-width: 960px;
+    /* min-width: 960px; */
     
     color: var(--bone);
 }
@@ -136,9 +136,9 @@ nav > button {
 }
 
 #content {
-    min-height: calc(100vh - 15rem);
+    min-height: calc(100vh - 14.72rem);
     padding-bottom: 2rem;
-    margin-top: -1px;
+    margin-top: -5px;
 }
 
 #center-title {
@@ -157,7 +157,7 @@ nav > button {
     visibility: hidden;
 }
 
-.home-text {
+.home-text, .contact-text {
     display: grid;
     place-items: center;
     grid-template-rows: repeat(5, 1fr);
@@ -166,11 +166,16 @@ nav > button {
     margin: auto;
 }
 
-.home-text > div {
+.home-text > div,
+.contact-text > div {
     font-size: 1.3rem;
     font-family: "Noto Serif";
     text-align: center;
     z-index: 2;
+}
+
+.contact-title {
+    font-size: 1.8rem !important; 
 }
 
 .menu-nav {
@@ -339,11 +344,4 @@ button > img {
 
 .goliath {
     transform: scale(2)
-}
-
-
-@media (max-width: 960px) {
-    #content {
-        width: 90%;
-    }
 }
