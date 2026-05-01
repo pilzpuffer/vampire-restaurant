@@ -18,7 +18,16 @@ let contactDisplay = function() {
         if ((text.includes(":") && !text.includes(" ")) || (text.includes(":") && state.vampire === true)) {
             newLine.classList.add("contact-title");
         } else if (text.includes("announce") || text.includes("consent") || text.includes("admitted")) {
+            newLine.classList.add("rules");
+        } else if (text.includes("+")) {
+            newLine.classList.add("phone");
+        }
 
+        if (newLine.classList.contains("rules")) {
+            let bloodDot = document.createElement("img");
+            bloodDot.src = bloodIcon;
+
+            newLine.append(bloodDot)
         }
 
         contactBlock.appendChild(newLine);
@@ -38,7 +47,6 @@ let contactDisplay = function() {
         addLine("reservations@thelastdrop.com");
         addLine("+1 (555) 013-6666");
         addLine("Walk in, or call ahead - whichever suits your evening");
-        addLine("We’ll be here when you arrive");
 
         content.appendChild(contactBlock);
         contactBlock.addEventListener("mouseover", function() {

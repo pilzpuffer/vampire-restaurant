@@ -174,8 +174,35 @@ nav > button {
     z-index: 2;
 }
 
+.contact-text  {
+    grid-template-rows: repeat(10, 1fr);
+}
+
+.contact-text .contact-title {
+    align-self: end;
+}
+
 .contact-title {
     font-size: 1.8rem !important; 
+}
+
+.rules {
+    display: grid;
+    grid-template-columns: 0.25fr 3fr;
+    place-items: center;
+    gap: 0.5rem;
+}
+
+.rules img {
+    height: 1.3rem;
+    filter: invert(1);
+
+    grid-column-start: 1;
+    grid-row: 1;
+}
+
+.phone {
+    align-self: start;
 }
 
 .menu-nav {
