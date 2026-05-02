@@ -271,12 +271,14 @@ button > img {
     font-family: "Tan";
     font-weight: bold;
     font-size: 1.8rem;
+    align-self: end;
 }
 
 .description {
     font-family: "Noto Serif";
     font-style: italic;
-    font-size: 1.15rem;
+    font-size: 1.3rem;
+    text-align: center;
 }
 
 .bat {
